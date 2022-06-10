@@ -15,6 +15,7 @@
    ```
    gauss UNK.gjf
    ```
+   where, gauss is Gaussian software. It meight be aliased to gauss, g09, g16 in your system.
    
 ## 2. Single-point electrostatic potential calculation at B3LYP/6-311G(d,p) level;
 
