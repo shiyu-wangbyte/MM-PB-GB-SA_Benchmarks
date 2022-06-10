@@ -1,7 +1,11 @@
 # MM-PB-GB-SA_Benchmarks
 
-Data for article "MM/PB(GB)SA Benchmarks on Soluble Proteins and Membrane Proteins"
+"MM/PB(GB)SA Benchmarks on Soluble Proteins and Membrane Proteins"
 
+## Overview
+
+This library contains molecular structures of the article "MM/PB(GB)SA Benchmarks on Soluble Proteins and Membrane Proteins" in 
+and a tutorial of "Obtaining a gromacs topology with an off-center charge"
 
 
 # Reference
