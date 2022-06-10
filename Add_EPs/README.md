@@ -1,18 +1,13 @@
 # Tutorial: OBTAINING A GROMACS TOPOLOGY WITH AN OFF-CENTER CHARGE
 
 ## 1.	Geometry optimization at B3LYP/6-311G(d,p) level;
-
-   1.1 Generate the Gaussian input file.
    
    ```
+   # Generate the Gaussian input file.
    antechamber -i UNK.mol2 -fi mol2 -o UNK.gjf -fo gcrt -pf y -gn "%nproc=10" -gm "%mem=1500MB" -ch "UNK" -gk "# B3LYP/6-311G(d,p) em=GD3BJ scrf(solvent=water) opt freq" -gv 1 -nc 0 -rn UNK
-   ```
+   #the usage of antechamber could be shown by "antechamber -h"
    
-   the usage of antechamber could be shown by "antechamber -h"
-   
-   1.2 Gaussian geometry optimization
-   
-   ```
+   #Gaussian geometry optimization
    gauss UNK.gjf
    ```
    where, gauss is Gaussian software. It meight be aliased to gauss, g09, g16 in your system.
