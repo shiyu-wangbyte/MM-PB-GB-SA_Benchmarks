@@ -27,6 +27,10 @@
 
 ## 2.	Generate mol2 file with RESP charge by antechamber and keep all temporary files;
 
+   ```
+   antechamber -i resp.log -fi gout -o lig.mol2 -fo mol2 -c resp -rn UNK -at gaff2
+   ```
+
 ## 3.	Determine the coordinates of extra points (EP) and generate the GROMACS Topology file with the CGenFF tool;
 
 ## 4.	Add the EP coordinates to the ESP file (a temporary file generated in step 2, normally named ANTECHAMBER.ESP);
