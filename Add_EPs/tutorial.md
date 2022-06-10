@@ -39,7 +39,9 @@
 
    The usage of CGenFF tool is :
    
+   ```
    /your/cgenff/installion/path/cgenff_to_gmx.sh mol=UNK.mol2
+   ```
 
 ### 5. Add the EP coordinates to the ESP file;
       
