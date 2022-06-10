@@ -13,6 +13,7 @@ This library contains:
 * **python 3.X**
 * **AmberTools**: https://ambermd.org/AmberTools.php
 * **Gaussian software**: https://gaussian.com/
+* **CGenFF Tool**: https://cgenff.umaryland.edu/
 
 ## Tutorial
 
