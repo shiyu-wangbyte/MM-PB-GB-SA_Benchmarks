@@ -12,7 +12,9 @@
    
    1.2 Gaussian geometry optimization
    
+   ```
    gauss UNK.gjf
+   ```
    
 ## 2. Single-point electrostatic potential calculation at B3LYP/6-311G(d,p) level;
 
