@@ -20,6 +20,7 @@
    echo "# B3LYP/6-311G(d,p) em=GD3BJ scrf(solvent=water) pop=MK IOp(6/33=2,6/42=6) geom=allcheck guess=read" >> resp.gjf
    # B3LYP/6-311G(d,p) can be placed with other functional and basis sets
    head -n 9 UNK.gjf | tail -n 4 >> resp.gjf
+   
    # Single-point electrostatic potential calculation
    gauss resp.gjf
    ```
