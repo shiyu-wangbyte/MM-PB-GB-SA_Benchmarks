@@ -19,6 +19,16 @@
    
 ## 2. Single-point electrostatic potential calculation at B3LYP/6-311G(d,p) level;
 
+   ```
+   # create Gaussian input file for single-point electrostatic potential calculation
+   head -n 4 UNK.gjf > resp.gjf
+   echo "# B3LYP/6-311G(d,p) em=GD3BJ scrf(solvent=water) pop=MK IOp(6/33=2,6/42=6) geom=allcheck guess=read" >> resp.gjf
+   # B3LYP/6-311G(d,p) can be placed with other functional and basis sets
+   head -n 9 UNK.gjf | tail -n 4 >> resp.gjf
+   # Single-point electrostatic potential calculation
+   gauss resp.gjf
+   ```
+
 ## 2.	Generate mol2 file with RESP charge by antechamber and keep all temporary files;
 
 ## 3.	Determine the coordinates of extra points (EP) and generate the GROMACS Topology file with the CGenFF tool;
