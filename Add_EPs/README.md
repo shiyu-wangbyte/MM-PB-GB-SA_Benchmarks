@@ -1,6 +1,6 @@
 # Tutorial: OBTAINING A GROMACS TOPOLOGY WITH AN OFF-CENTER CHARGE
 
-## 1.	Geometry optimization at B3LYP/6-311G(d,p) level;
+### 1.	Geometry optimization at B3LYP/6-311G(d,p) level;
    
    ```
    # Generate the Gaussian input file.
@@ -12,7 +12,7 @@
    ```
    where, gauss is Gaussian software. It meight be aliased to gauss, g09, g16 in your system.
    
-## 2. Single-point electrostatic potential calculation at B3LYP/6-311G(d,p) level;
+### 2. Single-point electrostatic potential calculation at B3LYP/6-311G(d,p) level;
 
    ```
    # create Gaussian input file for single-point electrostatic potential calculation
@@ -25,18 +25,22 @@
    gauss resp.gjf
    ```
 
-## 2.	Generate mol2 file with RESP charge by antechamber and keep all temporary files;
+### 3.	Generate mol2 file with RESP charge by antechamber and keep all temporary files;
 
    ```
    antechamber -i resp.log -fi gout -o lig.mol2 -fo mol2 -c resp -rn UNK -at gaff2
    ```
 
-## 3.	Determine the coordinates of extra points (EP) and generate the GROMACS Topology file with the CGenFF tool;
+### 4.	Determine the coordinates of extra points (EP) and generate the GROMACS Topology file with the CGenFF tool;
 
-## 4.	Add the EP coordinates to the ESP file (a temporary file generated in step 2, normally named ANTECHAMBER.ESP);
+   ```
+   /your/cgenff/installion/path/cgenff_to_gmx.sh mol=NEW.mol2
+   ```
 
-## 5.	Modify the IN file (another temporary file generated in step 2, normally named ANTECHAMBER_RESP1.IN) of resp software;
+### 5.	Add the EP coordinates to the ESP file (a temporary file generated in step 2, normally named ANTECHAMBER.ESP);
 
-## 6.	Refit RESP charges with modified temporary files by resp software;
+### 6.	Modify the IN file (another temporary file generated in step 2, normally named ANTECHAMBER_RESP1.IN) of resp software;
 
-## 7.	Replace the charges in the GROMACS Topology file (already generated in step 3) with new RESP charges generated in step 6.
+### 7.	Refit RESP charges with modified temporary files by resp software;
+
+### 8.	Replace the charges in the GROMACS Topology file (already generated in step 3) with new RESP charges generated in step 6.
