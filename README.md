@@ -3,6 +3,7 @@
 Data for article "MM/PB(GB)SA Benchmarks on Soluble Proteins and Membrane Proteins"
 
 
+
 Reference
 
 Costa, P. J. (2021). Transmembrane Anion Transport Mediated by Halogen Bonds: Using Off-Center Charges. Computational Design of Membrane Proteins. I. S. Moreira, M. Machuqueiro and J. Mourão. New York, NY, Springer US: 273-284.
