@@ -11,7 +11,7 @@ This library contains:
 ## Dependencies
 
 * **python 3.X**
-* **tensorflow>=1.7.0**: https://tensorflow.org
+* **AmberTools**: https://ambermd.org/AmberTools.php
 * **rdkit**: https://www.rdkit.org
 * **numpy**
 * **scikit-learn**
