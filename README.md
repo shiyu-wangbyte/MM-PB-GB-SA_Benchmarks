@@ -12,7 +12,7 @@ This library contains:
 
 * **python 3.X**
 * **AmberTools**: https://ambermd.org/AmberTools.php
-* **gaussian software**: https://gaussian.com/
+* **Gaussian software**: https://gaussian.com/
 
 
 ## Reference
