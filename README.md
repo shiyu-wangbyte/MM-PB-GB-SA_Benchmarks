@@ -5,8 +5,8 @@
 ## Overview
 
 This library contains:
-1. molecular structures of the article "MM/PB(GB)SA Benchmarks on Soluble Proteins and Membrane Proteins" in Membrane and Water_soluble folders,
-2. a tutorial of "Obtaining a gromacs topology with an off-center charge".
+1. Molecular structures of the article "MM/PB(GB)SA Benchmarks on Soluble Proteins and Membrane Proteins" in Membrane and Water_soluble folders,
+2. A tutorial of "Obtaining a gromacs topology with an off-center charge".
 
 
 ## Reference
