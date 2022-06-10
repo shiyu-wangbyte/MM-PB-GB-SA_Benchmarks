@@ -12,9 +12,8 @@ This library contains:
 
 * **python 3.X**
 * **AmberTools**: https://ambermd.org/AmberTools.php
-* **rdkit**: https://www.rdkit.org
-* **numpy**
-* **scikit-learn**
+* **gaussian software**: https://gaussian.com/
+
 
 ## Reference
 
