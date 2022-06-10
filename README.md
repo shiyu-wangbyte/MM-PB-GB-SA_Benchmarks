@@ -14,6 +14,9 @@ This library contains:
 * **AmberTools**: https://ambermd.org/AmberTools.php
 * **Gaussian software**: https://gaussian.com/
 
+## Tutorial
+
+See  [Add_EPs](https://github.com/shiyu-wangbyte/MM-PB-GB-SA_Benchmarks/tree/main/Add_EPs)
 
 ## Reference
 
