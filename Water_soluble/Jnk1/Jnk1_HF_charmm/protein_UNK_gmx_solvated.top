@@ -1,0 +1,51 @@
+;
+;	File 'protein_gmx.top' was generated
+;	By user: shiyu (1007)
+;	On host: node3
+;	At date: Sun Oct  2 21:26:13 2022
+;
+;	This is a standalone topology file
+;
+;	Created by:
+;	                    :-) GROMACS - gmx pdb2gmx, 2022.2 (-:
+;	
+;	Executable:   /soft/gromacs/2022v2/bin//gmx
+;	Data prefix:  /soft/gromacs/2022v2
+;	Working dir:  /home/shiyu/Jnk1_HF_charmm_restrain_1/1/setup
+;	Command line:
+;	  gmx pdb2gmx -f protein.pdb -o protein_gmx.pdb -p protein_gmx.top -ff charmm36 -water tip3p -ter -merge all -ignh
+;	Force field was read from current directory or a relative path - path added.
+;
+
+; Include forcefield parameters
+#include "./charmm36.ff/forcefield.itp"
+
+#include "./atomtypes.itp"
+#include "./protein_UNK_protein.itp"
+#include "./protein_UNK_ligand.itp"
+
+
+; Include water topology
+#include "./charmm36.ff/tip3p.itp"
+
+#ifdef POSRES_WATER
+; Position restraint for each water oxygen
+[ position_restraints ]
+;  i funct       fcx        fcy        fcz
+   1    1       1000       1000       1000
+#endif
+
+; Include topology for ions
+#include "./charmm36.ff/ions.itp"
+
+[ system ]
+; Name
+jnk1 in water
+
+[ molecules ]
+; Compound        #mols
+Protein_chain_A     1
+UNK                  1
+SOL         14712
+NA               46
+CL               46

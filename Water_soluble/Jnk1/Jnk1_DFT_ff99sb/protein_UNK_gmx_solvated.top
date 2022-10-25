@@ -1,0 +1,54 @@
+;
+;	File 'protein_gmx.top' was generated
+;	By user: shiyu (1007)
+;	On host: node3
+;	At date: Wed Oct 12 11:16:40 2022
+;
+;	This is a standalone topology file
+;
+;	Created by:
+;	                    :-) GROMACS - gmx pdb2gmx, 2022.2 (-:
+;	
+;	Executable:   /soft/gromacs/2022v2/bin//gmx
+;	Data prefix:  /soft/gromacs/2022v2
+;	Working dir:  /home/shiyu/Jnk/Jnk1_BY_ff99SB_1_1/setup
+;	Command line:
+;	  gmx pdb2gmx -f pro.pdb -o protein_gmx.pdb -p protein_gmx.top -water tip3p -ter -merge all -ignh
+;	Force field was read from the standard GROMACS share directory.
+;
+
+; Include forcefield parameters
+#include "amber99sb.ff/forcefield.itp"
+
+#include "./atomtypes.itp"
+#include "./protein_UNK_protein.itp"
+#ifdef POSRES_md
+#include "./backbone_restraints.itp"
+#endif
+#include "./protein_UNK_ligand.itp"
+
+
+; Include water topology
+#include "amber99sb.ff/tip3p.itp"
+
+#ifdef POSRES_WATER
+; Position restraint for each water oxygen
+[ position_restraints ]
+;  i funct       fcx        fcy        fcz
+   1    1       1000       1000       1000
+#endif
+
+; Include topology for ions
+#include "amber99sb.ff/ions.itp"
+
+[ system ]
+; Name
+Protein in water
+
+[ molecules ]
+; Compound        #mols
+Protein_chain_A     1
+UNK                  1
+SOL         14712
+NA               46
+CL               46

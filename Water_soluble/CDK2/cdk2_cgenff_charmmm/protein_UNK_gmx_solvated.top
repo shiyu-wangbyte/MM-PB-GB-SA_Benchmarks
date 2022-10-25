@@ -1,0 +1,61 @@
+;
+;	File 'protein_gmx_A.top' was generated
+;	By user: shiyu (1014)
+;	On host: node1
+;	At date: Mon Mar  7 23:13:16 2022
+;
+;	This is a standalone topology file
+;
+;	Created by:
+;	                    :-) GROMACS - gmx pdb2gmx, 2020.4 (-:
+;	
+;	Executable:   /soft/gromacs/2020v4/bin/gmx_mpi
+;	Data prefix:  /soft/gromacs/2020v4
+;	Working dir:  /data/shiyu/cdk/cdk21_restrain/1/setup
+;	Command line:
+;	  gmx_mpi pdb2gmx -f protein_A.pdb -o protein_gmx_A.pdb -p protein_gmx_A.top -ff charmm36 -water tip3p -ter -merge all -ignh
+;	Force field was read from current directory or a relative path - path added.
+;
+
+; Include forcefield parameters
+#include "./charmm36.ff/forcefield.itp"
+
+#include "./charmm36.ff/UNK_ffbonded.itp"
+
+
+#include "./protein_UNK_protein_A.itp"
+#ifdef POSRES_md
+#include "./backbone_restraints_A.itp"
+#endif
+#include "./protein_UNK_protein_B.itp"
+#ifdef POSRES_md
+#include "./backbone_restraints_B.itp"
+#endif
+#include "./protein_UNK_ligand.itp"
+
+
+; Include water topology
+#include "./charmm36.ff/tip3p.itp"
+
+#ifdef POSRES_WATER
+; Position restraint for each water oxygen
+[ position_restraints ]
+;  i funct       fcx        fcy        fcz
+   1    1       1000       1000       1000
+#endif
+
+; Include topology for ions
+#include "./charmm36.ff/ions.itp"
+
+[ system ]
+; Name
+Protein in water
+
+[ molecules ]
+; Compound        #mols
+Protein_chain_A     1
+Protein_chain_B     1
+Other           1
+SOL         22018
+NA               69
+CL               69
