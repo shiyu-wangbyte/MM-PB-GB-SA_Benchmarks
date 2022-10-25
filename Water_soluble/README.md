@@ -1,4 +1,4 @@
-Molecular structures for soluble protein systems
+Molecular structures and topology files for soluble protein systems
 
 Files in this folder are taken from the article below. If you use them in your research, please cite:
 
