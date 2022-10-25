@@ -1,0 +1,7 @@
+[ moleculetype ]
+; Name            nrexcl
+Other               3
+;
+[ atoms ]
+;   nr       type  resnr residue  atom   cgnr     charge       mass  typeB    chargeB      massB
+; residue   1 LIG rtp LIG  q -0.0

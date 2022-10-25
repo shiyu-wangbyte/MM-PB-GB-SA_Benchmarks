@@ -1,0 +1,9 @@
+--Link1--
+%nproc=10
+%chk=2_UNK
+%mem=1500MB
+# B3LYP/6-311G(d,p) em=GD3BJ scrf(solvent=water) pop=MK IOp(6/33=2,6/42=6) geom=allcheck guess=read
+
+remark line goes here
+
+0   1

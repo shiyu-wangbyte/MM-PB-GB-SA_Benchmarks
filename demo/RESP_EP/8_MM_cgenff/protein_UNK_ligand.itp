@@ -1,0 +1,123 @@
+[ moleculetype ]
+; Name            nrexcl
+Other               3
+;
+[ atoms ]
+;   nr       type  resnr residue  atom   cgnr     charge       mass  typeB    chargeB      massB
+; residue   1 LIG rtp LIG  q -0.0
+     1     CG2R61      1    LIG     C1      1	 -0.130079	   12.011   ; qtot 	 -0.130079
+     2     CG2R61      1    LIG     C2      2	 -0.132861	   12.011   ; qtot 	 -0.132861
+     3     CG2R61      1    LIG     C3      3	 -0.198594	   12.011   ; qtot 	 -0.198594
+     4     CG2R61      1    LIG     C4      4	  0.260396	   12.011   ; qtot 	  0.260396
+     5     CG2R61      1    LIG     C5      5	 -0.198594	   12.011   ; qtot 	 -0.198594
+     6     CG2R61      1    LIG     C6      6	 -0.132861	   12.011   ; qtot 	 -0.132861
+     7      CLGR1      1    LIG    CL7      7	 -0.302532	   35.453   ; qtot 	 -0.302532
+     8      HGR61      1    LIG     H8      8	  0.140321	    1.008   ; qtot 	  0.140321
+     9      HGR61      1    LIG     H9      9	  0.149643	    1.008   ; qtot 	  0.149643
+    10      HGR62      1    LIG    H10     10	  0.170128	    1.008   ; qtot 	  0.170128
+    11      HGR62      1    LIG    H11     11	  0.170128	    1.008   ; qtot 	  0.170128
+    12      HGR61      1    LIG    H12     12	  0.149643	    1.008   ; qtot 	  0.149643
+    13        LPH      1    LIG    LP1      7	  0.055264	        0   ; qtot 	  0.055264
+
+[ bonds ]
+;  ai    aj funct            c0            c1            c2            c3
+    1     2     1
+    1     6     1
+    1     8     1
+    2     3     1
+    2     9     1
+    3     4     1
+    3    10     1
+    4     5     1
+    4     7     1
+    5     6     1
+    5    11     1
+    6    12     1
+
+[ pairs ]
+;  ai    aj funct            c0            c1            c2            c3
+    1     4     1
+    1    10     1
+    1    11     1
+    2     5     1
+    2     7     1
+    2    12     1
+    3     6     1
+    3     8     1
+    3    11     1
+    4     9     1
+    4    12     1
+    5     8     1
+    5    10     1
+    6     7     1
+    6     9     1
+    7    10     1
+    7    11     1
+    8     9     1
+    8    12     1
+    9    10     1
+   11    12     1
+   13     2     1
+   13     6     1
+   13    10     1
+   13    11     1
+
+[ angles ]
+;  ai    aj    ak funct            c0            c1            c2            c3
+    2     1     6     5
+    2     1     8     5
+    6     1     8     5
+    1     2     3     5
+    1     2     9     5
+    3     2     9     5
+    2     3     4     5
+    2     3    10     5
+    4     3    10     5
+    3     4     5     5
+    3     4     7     5
+    5     4     7     5
+    4     5     6     5
+    4     5    11     5
+    6     5    11     5
+    1     6     5     5
+    1     6    12     5
+    5     6    12     5
+
+[ dihedrals ]
+;  ai    aj    ak    al funct            c0            c1            c2            c3            c4            c5
+    6     1     2     3     9
+    6     1     2     9     9
+    8     1     2     3     9
+    8     1     2     9     9
+    2     1     6     5     9
+    2     1     6    12     9
+    8     1     6     5     9
+    8     1     6    12     9
+    1     2     3     4     9
+    1     2     3    10     9
+    9     2     3     4     9
+    9     2     3    10     9
+    2     3     4     5     9
+    2     3     4     7     9
+   10     3     4     5     9
+   10     3     4     7     9
+    3     4     5     6     9
+    3     4     5    11     9
+    7     4     5     6     9
+    7     4     5    11     9
+    4     5     6     1     9
+    4     5     6    12     9
+   11     5     6     1     9
+   11     5     6    12     9
+
+[ exclusions ]
+13 7 4 5 2 6 10 11 3 
+
+[ virtual_sites3 ]
+; Site   from        funct theta d
+   13     7     4     5     3 180.00   0.16
+
+; Include Position restraint file
+#ifdef POSRES
+#include "posre_ligand.itp"
+#endif

@@ -1,0 +1,12 @@
+PARA /soft/cgenff-2021v1/data/charmm36/par_all36_prot.prm
+PARA /soft/cgenff-2021v1/data/charmm36/par_all36_na.prm
+PARA /soft/cgenff-2021v1/data/charmm36/par_all36_carb.prm
+PARA /soft/cgenff-2021v1/data/charmm36/par_all36_lipid.prm
+PARA /soft/cgenff-2021v1/data/charmm36/par_water_ions.str
+CGENFF_RULES  /soft/cgenff-2021v1/data/cgenff/cgenff.rules
+CGENFF_PAR  /soft/cgenff-2021v1/data/cgenff/par_all36_cgenff.prm
+CHARMMFFDIR_GMX  charmm36.ff
+LIGAND_MOL2  NEW_4setup.mol2
+GMX_PDB  NEW_gmx.pdb
+GMX_TOPOL  NEW_gmx.top
+OUTCGENFFSTRFILE  NEW_charmm_gmx.str
