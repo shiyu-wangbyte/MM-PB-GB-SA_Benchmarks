@@ -7,7 +7,7 @@
 This library contains:
 1. Molecular structures of the article "MM/PB(GB)SA Benchmarks on Soluble Proteins and Membrane Proteins" in [Membrane](https://github.com/shiyu-wangbyte/MM-PB-GB-SA_Benchmarks/tree/main/Membrane) and [Water_soluble](https://github.com/shiyu-wangbyte/MM-PB-GB-SA_Benchmarks/tree/main/Water_soluble) folders,
 2. A tutorial and essential files of "Obtaining a gromacs topology with an off-center charge" are in [Add_EPs](https://github.com/shiyu-wangbyte/MM-PB-GB-SA_Benchmarks/blob/main/tutorial.md) file.
-3. Example of R and MAE calculation [R_MAE](https://github.com/shiyu-wangbyte/MM-PB-GB-SA_Benchmarks/tree/main/demo).
+3. Example of R and MAE calculation is in [R_MAE](https://github.com/shiyu-wangbyte/MM-PB-GB-SA_Benchmarks/tree/main/demo).
 
 ## Dependencies
 
