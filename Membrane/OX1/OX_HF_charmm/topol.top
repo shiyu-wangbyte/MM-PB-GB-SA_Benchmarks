@@ -1,0 +1,24 @@
+#include "./forcefield.itp"
+#include "./atomtypes.itp"
+#include "./SOD.itp"
+#include "./CLA.itp"
+#include "./TIP3.itp"
+#include "./POPC.itp"
+
+
+#include "./PROA.itp"
+#include "./ligand.itp"
+
+
+[ system ]
+; Name
+Generic title
+
+[ molecules ]
+; Compound       #mols
+PROA  1
+UNK  1
+POPC  130
+SOD 38
+CLA 49
+TIP3  14494

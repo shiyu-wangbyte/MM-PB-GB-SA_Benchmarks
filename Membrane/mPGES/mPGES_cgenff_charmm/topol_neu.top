@@ -1,0 +1,77 @@
+;
+;	File 'PROA_gmx.top' was generated
+;	By user: shiyu (1014)
+;	On host: node1
+;	At date: Wed Mar  9 14:24:14 2022
+;
+;	This is a standalone topology file
+;
+;	Created by:
+;	                    :-) GROMACS - gmx pdb2gmx, 2018.4 (-:
+;	
+;	Executable:   /soft/gromacs/2018v4/bin/gmx_mpi
+;	Data prefix:  /soft/gromacs/2018v4
+;	Working dir:  /data/shiyu/mPGES/mPGES_restrain_1/charmm-gui-5tl9-7DN-1/setup
+;	Command line:
+;	  gmx_mpi pdb2gmx -f PROA.pdb -o PROA_gmx.pdb -p PROA_gmx.top -ff charmm36 -water tip3p -ter -merge all -ignh
+;	Force field was read from current directory or a relative path - path added.
+;
+
+; Include forcefield parameters
+#include "./charmm36.ff/forcefield.itp"
+
+
+
+#include "./charmm36.ff/GSH_ffbonded.itp"
+#include "./charmm36.ff/7DN_ffbonded.itp"
+
+
+#include "./PROA_gmx_protein.itp"
+#ifdef POSRES_md
+#include "./backbone_restraints_A.itp"
+#endif
+#include "./PROB_gmx_protein.itp"
+#ifdef POSRES_md
+#include "./backbone_restraints_B.itp"
+#endif
+#include "./PROC_gmx_protein.itp"
+#ifdef POSRES_md
+#include "./backbone_restraints_C.itp"
+#endif
+#include "./GSH_gmx_protein.itp"
+#ifdef POSRES_md
+#include "./posre_GSH.itp"
+#endif
+#include "./7DN_gmx_protein.itp"
+; Include topology for lipid
+#include "./POPC.itp"
+; Include water topology
+#include "./TIP3.itp"
+
+
+
+#ifdef POSRES_WATER
+; Position restraint for each water oxygen
+[ position_restraints ]
+;  i funct       fcx        fcy        fcz
+   1    1       1000       1000       1000
+#endif
+
+; Include topology for ions
+#include "./charmm36.ff/ions.itp"
+
+[ system ]
+; Name
+Georgetown Riga Oslo Madrid Amsterdam Chisinau Stockholm
+
+[ molecules ]
+; Compound        #mols
+PROA                1
+PROB                1
+PROC                1
+GSH                 1
+7DN                 1
+POPC              130
+TIP3        11237
+NA               58
+CL               58

@@ -1,0 +1,6 @@
+[ atomtypes ]
+; name    at.num    mass    charge ptype  sigma      epsilon
+OW             8  16.000000  0.00000000  A     0.31507524       0.635968
+HW             1   1.008000  0.00000000  A              0              0
+
+

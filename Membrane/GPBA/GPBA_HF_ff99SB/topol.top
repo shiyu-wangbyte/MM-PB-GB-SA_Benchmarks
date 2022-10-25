@@ -1,0 +1,26 @@
+#include "./forcefield.itp"
+#include "./atomtypes.itp"
+#include "./Na.itp"
+#include "./Cl.itp"
+#include "./TP3.itp"
+#include "./POPC.itp"
+
+
+#include "./PROA.itp"
+#include "./PROB.itp"
+#include "./ligand.itp"
+
+
+[ system ]
+; Name
+Generic title
+
+[ molecules ]
+; Compound       #mols
+PROA  1
+PROB  1
+UNK  1
+POPC  130
+Na+ 36
+Cl- 48
+TP3  13496
