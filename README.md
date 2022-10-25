@@ -16,7 +16,7 @@ This library contains:
 
 ## Tutorial
 
-See  [Add_EPs](https://github.com/shiyu-wangbyte/MM-PB-GB-SA_Benchmarks/blob/main/tutorial.md)
+See  [Add_EPs](https://github.com/shiyu-wangbyte/MM-PB-GB-SA_Benchmarks/blob/main/demo/RESP_EP/tutorial.md)
 
 ## Reference
 
